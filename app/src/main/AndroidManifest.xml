@@ -18,7 +18,7 @@
             android:theme="@style/Theme.Lab14_widgets"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
-                <action android:name="android.appwidget.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
@@ -41,8 +41,7 @@
 
         <receiver
             android:name=".FinalWidget"
-            android:exported="true"
-            android:label="Panel de Control Widget">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
