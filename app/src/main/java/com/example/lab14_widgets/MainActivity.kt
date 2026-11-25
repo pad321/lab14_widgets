@@ -1,4 +1,4 @@
-xpackage com.example.lab14_widgets
+package com.example.lab14_widgets
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

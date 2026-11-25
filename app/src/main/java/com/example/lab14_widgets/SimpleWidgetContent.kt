@@ -14,8 +14,10 @@ import androidx.glance.background
 import androidx.glance.layout.Alignment
 import androidx.glance.layout.Column
 import androidx.glance.layout.Row
+import androidx.glance.layout.Spacer
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.padding
+import androidx.glance.layout.width
 import androidx.glance.text.Text
 
 class SimpleWidgetContent : GlanceAppWidget() {
@@ -32,19 +34,25 @@ class SimpleWidgetContent : GlanceAppWidget() {
 @Composable
 private fun MyContent() {
     Column(
-        modifier = GlanceModifier.fillMaxSize()
+        modifier = GlanceModifier
+            .fillMaxSize()
             .background(GlanceTheme.colors.background),
         verticalAlignment = Alignment.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "¿A donde quieres dirigirte?",
+            text = "¿A dónde quieres dirigirte?",
             modifier = GlanceModifier.padding(12.dp)
         )
         Row(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
-                text = "Página Principal",
+                text = "Home",
                 onClick = actionStartActivity<MainActivity>()
+            )
+            Spacer(modifier = GlanceModifier.width(8.dp))
+            Button(
+                text = "Work",
+                onClick = actionStartActivity<WorkActivity>()
             )
         }
     }
